@@ -4,6 +4,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../shared.module';
 
+interface Options {
+  value: string,
+  icon?: string
+}
 @Component({
   selector: 'app-select',
   imports: [MatSelectModule, MatIconModule, CommonModule, SharedModule],
@@ -12,7 +16,7 @@ import { SharedModule } from '../shared.module';
 })
 export class SelectComponent {
 
-  @Input() options: string[] = [];
+  @Input() options = [] as Options[];
   @Input() appearance: 'fill' | 'outline'  = 'outline';
   @Input() placeholder: string = '';
   @Input() disabled: boolean = false;

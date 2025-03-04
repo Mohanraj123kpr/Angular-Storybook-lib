@@ -26,13 +26,29 @@ type Story = StoryObj<SelectComponent>;
 export const Default: Story = {
   args: {
     appearance : 'fill',
-    options : ['option 1', 'option 2']
+    options : [{
+      value: 'Option 1',
+      icon: ''
+    },
+    {
+      value: 'Option 2',
+      icon: ''
+    }
+  ]
   },
 };
 
 export const Outline: Story = {
   args: {
     appearance : 'outline',
-    options : ['option 1', 'option 2']
+    options : [{
+      value: 'Option 1',
+      icon: 'assured_workload'
+    },
+    {
+      value: 'Option 2',
+      icon: 'shopping_cart_checkout'
+    }
+  ]
   },
 };
